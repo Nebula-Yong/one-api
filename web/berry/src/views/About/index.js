@@ -37,11 +37,11 @@ const About = () => {
         <>
           <Box>
             <Container sx={{ paddingTop: '40px' }}>
-              <MainCard title="关于">
+              <MainCard title="About Us">
                 <Typography variant="body2">
-                  可在设置页面设置关于内容，支持 HTML & Markdown <br />
-                  项目仓库地址：
-                  <a href="https://github.com/songquanpeng/one-api">https://github.com/songquanpeng/one-api</a>
+                  This is about us <br />
+                  Link:
+                  <a href="https://www.lq-ltd.com">https://www.lq-ltd.com</a>
                 </Typography>
               </MainCard>
             </Container>

@@ -1,9 +1,9 @@
-// material-ui
-import { Link, Container, Box } from '@mui/material';
+// Material-UI
+import { Link, Container, Box, Typography } from '@mui/material';
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-// ==============================|| FOOTER - AUTHENTICATION 2 & 3 ||============================== //
+// ==============================|| FOOTER - CUSTOM VERSION ||============================== //
 
 const Footer = () => {
   const siteInfo = useSelector((state) => state.siteInfo);
@@ -15,18 +15,14 @@ const Footer = () => {
           <div className="custom-footer" dangerouslySetInnerHTML={{ __html: siteInfo.footer_html }}></div>
         ) : (
           <>
-            <Link href="https://github.com/songquanpeng/one-api" target="_blank">
-              {siteInfo.system_name} {process.env.REACT_APP_VERSION}{' '}
-            </Link>
-            由{' '}
-            <Link href="https://github.com/songquanpeng" target="_blank">
-              JustSong
-            </Link>{' '}
-            构建，主题 berry 来自{' '}
-            <Link href="https://github.com/MartialBE" target="_blank">
-              MartialBE
-            </Link>{' '}，源代码遵循
-            <Link href="https://opensource.org/licenses/mit-license.php"> MIT 协议</Link>
+            <Typography variant="body2" color="textSecondary">
+              © 2025 Lambda Quantum. All rights reserved.
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              📩 Contact us: <Link href="mailto:support@lq-ltd.com">support@lq-ltd.com</Link> | 
+              <Link href="/privacy" sx={{ marginLeft: '8px' }}>Privacy Policy</Link> | 
+              <Link href="/terms" sx={{ marginLeft: '8px' }}>Terms of Service</Link>
+            </Typography>
           </>
         )}
       </Box>

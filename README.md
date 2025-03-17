@@ -201,6 +201,20 @@ docker-compose ps
    ```shell
    git clone https://github.com/songquanpeng/one-api.git
 
+   # 安装编译工具
+   wget https://go.dev/dl/go1.21.7.linux-amd64.tar.gz
+   sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.7.linux-amd64.tar.gz
+   echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+   echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+   source ~/.bashrc
+   go version
+
+   # 安装 Node.js 和 npm (建议使用 LTS 版本)
+   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+   sudo apt install -y nodejs
+   node --version
+   npm --version
+
    # 构建前端
    cd one-api/web/default
    npm install
@@ -209,11 +223,14 @@ docker-compose ps
    # 构建后端
    cd ../..
    go mod download
+   set CGO_ENABLED=1
    go build -ldflags "-s -w" -o one-api
    ````
 2. 运行：
    ```shell
    chmod u+x one-api
+   npm start
+   export THEME=berry
    ./one-api --port 3000 --log-dir ./logs
    ```
 3. 访问 [http://localhost:3000/](http://localhost:3000/) 并登录。初始账号用户名为 `root`，密码为 `123456`。

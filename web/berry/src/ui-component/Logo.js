@@ -19,7 +19,7 @@ const Logo = () => {
   const theme = useTheme();
   const logo = theme.palette.mode === 'light' ? logoLight : logoDark;
 
-  return <img src={siteInfo.logo || logo} alt={siteInfo.system_name} height="50" />;
+  return <img src={siteInfo.logo || logo} alt={siteInfo.system_name} height="68" />;
 };
 
 export default Logo;

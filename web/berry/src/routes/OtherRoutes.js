@@ -14,6 +14,8 @@ const ForgetPassword = Loadable(lazy(() => import('views/Authentication/Auth/For
 const ResetPassword = Loadable(lazy(() => import('views/Authentication/Auth/ResetPassword')));
 const Home = Loadable(lazy(() => import('views/Home')));
 const About = Loadable(lazy(() => import('views/About')));
+const Privacy = Loadable(lazy(() => import('views/Privacy'))); // 添加隐私政策路由
+const Terms = Loadable(lazy(() => import('views/Terms'))); // 添加服务条款路由
 const NotFoundView = Loadable(lazy(() => import('views/Error')));
 
 // ==============================|| AUTHENTICATION ROUTING ||============================== //
@@ -29,6 +31,14 @@ const OtherRoutes = {
     {
       path: '/about',
       element: <About />
+    },
+    {
+      path: '/privacy', // 添加隐私政策路由
+      element: <Privacy />
+    },
+    {
+      path: '/terms', // 添加服务条款路由
+      element: <Terms />
     },
     {
       path: '/login',
