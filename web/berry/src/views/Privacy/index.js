@@ -56,7 +56,7 @@ const privacyPolicy = {
       section4: "4. Data Security & Retention",
       description: `We implement industry-standard security measures to protect your data from unauthorized access, loss, or misuse. This includes encryption, access controls, and secure storage practices.
 
-      Your data is securely stored on Huawei Cloud servers located in Hong Kong.
+      Your data is securely stored on Digital Ocean servers located in Frankfurt, Germany.
       
       Your data is retained only as long as necessary for service functionality, legal compliance, and legitimate business purposes. Upon request, we will delete your data within 30 days, in accordance with applicable laws.`
     },

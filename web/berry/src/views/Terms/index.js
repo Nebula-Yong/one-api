@@ -62,7 +62,7 @@ const termsOfService = {
 
     geographicRestrictions: {
         section7: "8. Geographic Restrictions",
-        description: `Lambda Quantum’s services are not available to users from the following countries: United Kingdom, China.`
+        description: `Lambda Quantum’s services are not available to users from the following countries: United Kingdom, Mainland China.`
     },
 
     intellectualProperty: {
